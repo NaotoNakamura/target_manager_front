@@ -1,13 +1,12 @@
 import Modal from './Modal';
-const Target = ({text, handleChange, sendTarget, targetValues, isShow, setIsShow}) => {
+const Target = ({targetValues, isShow, setIsShow, setTargetValues}) => {
   return (
     <>
       <h1>目標管理<button onClick={() => {setIsShow(true)}}>+</button></h1>
       {isShow && <Modal 
                   setIsShow={setIsShow} 
-                  text={text} 
-                  handleChange={handleChange} 
-                  sendTarget={sendTarget} 
+                  setTargetValues={setTargetValues} 
+                  targetValues={targetValues} 
       />}
 
       {targetValues.map((target, i) => (
