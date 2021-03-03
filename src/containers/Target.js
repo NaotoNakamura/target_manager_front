@@ -4,12 +4,6 @@ import Target from '../components/Target';
 
 const EnhancedTarget = () => {
   const [targetValues, setTargetValues] = useTarget();
-  const [isShow, setIsShow] = useState(false);
-  return <Target 
-            targetValues={targetValues}
-            isShow={isShow}
-            setIsShow={setIsShow}
-            setTargetValues={setTargetValues}
-          />;
+  return <Target targetValues={targetValues} setTargetValues={setTargetValues}/>;
 }
 export default EnhancedTarget;

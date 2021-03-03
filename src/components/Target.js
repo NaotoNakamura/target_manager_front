@@ -1,20 +1,12 @@
-import Modal from './Modal';
-const Target = ({targetValues, isShow, setIsShow, setTargetValues}) => {
+import TargetInputForm from './TargetInputForm';
+import TargetList from './TargetList';
+
+const Target = ({targetValues, setTargetValues}) => {
   return (
     <>
-      <h1>目標管理<button onClick={() => {setIsShow(true)}}>+</button></h1>
-      {isShow && <Modal 
-                  setIsShow={setIsShow} 
-                  setTargetValues={setTargetValues} 
-                  targetValues={targetValues} 
-      />}
-
-      {targetValues.map((target, i) => (
-        <div key={i}>
-          {target.id}：{target.target_title}
-          <input type="text"></input><button>タスク追加</button>
-        </div>
-      ))}
+      <h1>目標管理</h1>
+      <TargetInputForm setTargetValues={setTargetValues} targetValues={targetValues}/>
+      <TargetList setTargetValues={setTargetValues} targetValues={targetValues} />
     </>
   );
 }
