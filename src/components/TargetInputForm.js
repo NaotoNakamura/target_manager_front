@@ -7,6 +7,7 @@ const TargetInputForm = ({setTargetValues, targetValues}) => {
       [...targetValues, {
         id: targetValues.length + 1,
         target_title: text,
+        tasks: []
       }]
     );
     setText("");

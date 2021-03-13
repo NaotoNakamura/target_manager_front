@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import useTarget from '../hooks/use-target';
 import Target from '../components/Target';
 
